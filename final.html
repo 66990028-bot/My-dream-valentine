@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+background:black;
+color:white;
+text-align:center;
+font-family:Arial;
+overflow:hidden;
+}
+
+.heart{
+position:absolute;
+color:pink;
+animation:fall 6s linear infinite;
+}
+
+@keyframes fall{
+0%{top:-10%;}
+100%{top:110%;}
+}
+</style>
+</head>
+
+<body>
+
+<h1 style="margin-top:120px;">รักเธอที่สุดเลย 💖</h1>
+<p>ขอบคุณที่อยู่ในชีวิตฉัน</p>
+
+<script>
+setInterval(()=>{
+let heart=document.createElement("div");
+heart.className="heart";
+heart.style.left=Math.random()*100+"%";
+heart.innerHTML="💗";
+document.body.appendChild(heart);
+setTimeout(()=>heart.remove(),6000);
+},200);
+</script>
+
+</body>
+</html>
